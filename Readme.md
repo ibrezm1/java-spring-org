@@ -56,3 +56,25 @@ docker run -e JASYPT_ENCRYPTOR_PASSWORD=yourEncryptionPassword -p 8080:8080 your
  100  docker login
   101  docker tag javatest:tag ibrezm1/my-spring-app:v1
   102  docker push ibrezm1/my-spring-app:v1
+
+
+gcloud container clusters create-auto hello-cluster
+gcloud container clusters get-credentials hello-cluster --region us-central1
+
+kubectl create deployment hello-app --image=ibrezm1/my-spring-app:v1
+
+
+kubectl apply -f springboot-app-deployment.yaml
+kubectl exec -it <pod-name> -- /bin/bash
+echo $DB_URL
+
+
+kubectl apply -f springboot-app-service.yaml
+
+
+
+kubectl get service springboot-app-service
+
+
+curl http://EXTERNAL_IP
+
