@@ -63,6 +63,14 @@ gcloud container clusters get-credentials hello-cluster --region us-central1
 
 kubectl create deployment hello-app --image=ibrezm1/my-spring-app:v1
 
+  115  kubectl apply -f springboot-app-deployment.yaml
+  116  kubectl get pods
+  117  kubectl apply -f springboot-app-service.yaml
+  118  kubectl exec -it springboot-app-675d847d87-kr4b9  -- /bin/bash
+  kubectl logs  springboot-app-675d847d87-kr4b9
+    122  kubectl get service springboot-app-service  //// get url 
+  123  curl http://35.232.14.224
+
 
 kubectl apply -f springboot-app-deployment.yaml
 kubectl exec -it <pod-name> -- /bin/bash
