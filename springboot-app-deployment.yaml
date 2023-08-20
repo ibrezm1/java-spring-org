@@ -17,3 +17,6 @@ spec:
           image: ibrezm1/my-spring-app:v1
           ports:
             - containerPort: 8080
+          env:
+            - name: DB_URL
+              value: "jdbc:mysql://db-host:db-port/db-name"
