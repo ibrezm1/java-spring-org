@@ -79,13 +79,18 @@ echo $DB_URL
 
 kubectl apply -f springboot-app-service.yaml
 
+kubectl get service springboot-app-service
+
+curl http://EXTERNAL_IP
+
+
 https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app
 
 https://jhooq.com/building-first-helm-chart-with-spring-boot/
 
+https://shashanksrivastava.medium.com/install-configure-argo-cd-on-kind-kubernetes-cluster-f0fee69e5ac4
 
-kubectl get service springboot-app-service
 
 
-curl http://EXTERNAL_IP
+
 
