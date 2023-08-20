@@ -1,0 +1,30 @@
+# IDE-specific files
+.idea/
+.vscode/
+*.iml
+
+# Compiled class files
+target/
+build/
+
+# Gradle-specific files
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+
+# Spring Boot generated files
+target/
+build/
+
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+
+# Compiled binaries or scripts
+bin/
