@@ -9,9 +9,7 @@ build/
 
 # Gradle-specific files
 .gradle/
-gradle/
-gradlew
-gradlew.bat
+
 
 # Spring Boot generated files
 target/
