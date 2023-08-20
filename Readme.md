@@ -47,3 +47,12 @@ GweBmhjb0P56wPKdnaUpiw==
 ---------------------
 
 docker run -e JASYPT_ENCRYPTOR_PASSWORD=yourEncryptionPassword -p 8080:8080 your-image-name
+
+
+   96  docker build -t javatest:tag .
+   97  docker images
+   98  docker run -p 8080:8080 javatest:tag
+
+ 100  docker login
+  101  docker tag javatest:tag ibrezm1/my-spring-app:v1
+  102  docker push ibrezm1/my-spring-app:v1
