@@ -71,6 +71,8 @@ echo $DB_URL
 
 kubectl apply -f springboot-app-service.yaml
 
+https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app
+
 
 
 kubectl get service springboot-app-service
