@@ -92,6 +92,9 @@ https://shashanksrivastava.medium.com/install-configure-argo-cd-on-kind-kubernet
 
 Practice Link : Setting-Up Argo CD https://killercoda.com/mabusaa/course/argocd-endusers-scenarios/01-setting-up-argocd
 
+https://github.com/mabusaa/argocd-example-apps.git
+
+
 
 
 
