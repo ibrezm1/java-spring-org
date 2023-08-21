@@ -28,3 +28,33 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+// added additional to build and upload
+task buildDockerImage(type: Exec) {
+    workingDir 'path/to/your/dockerfile/directory'
+
+    commandLine 'docker', 'build', '-t', 'your-docker-image-name:your-tag', '.'
+
+    // Add any additional configuration for building the image
+}
+
+task uploadDockerImage(type: Exec) {
+    doLast {
+        exec {
+            commandLine 'docker', 'login', '-u', 'your-dockerhub-username', '-p', 'your-dockerhub-password'
+        }
+    }
+
+    doLast {
+        exec {
+            commandLine 'docker', 'tag', 'your-docker-image-name:your-tag', 'your-dockerhub-username/your-docker-image-name:your-tag'
+        }
+        exec {
+            commandLine 'docker', 'push', 'your-dockerhub-username/your-docker-image-name:your-tag'
+        }
+    }
+}
+// ./gradlew buildDockerImage   
+// ./gradlew uploadDockerImage
+buildDockerImage.dependsOn('build')
+uploadDockerImage.dependsOn('buildDockerImage')
