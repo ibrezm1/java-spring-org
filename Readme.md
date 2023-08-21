@@ -90,6 +90,7 @@ https://jhooq.com/building-first-helm-chart-with-spring-boot/
 
 https://shashanksrivastava.medium.com/install-configure-argo-cd-on-kind-kubernetes-cluster-f0fee69e5ac4
 
+Practice Link : Setting-Up Argo CD https://killercoda.com/mabusaa/course/argocd-endusers-scenarios/01-setting-up-argocd
 
 
 
